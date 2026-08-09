@@ -34,7 +34,7 @@ Built and deployed this portfolio site itself as a cloud project — a Next.js s
 
 ### 💰 AWS Cost & Resource Auditor
 Read-only CLI tool that scans an AWS account for common sources of wasted spend — unattached EBS volumes, idle EC2 instances (via CloudWatch CPU metrics), S3 buckets missing lifecycle policies, and unused Elastic IPs. Built with Python and boto3, with paginated API calls and fail-safe error handling per check.
-🔗 [Walkthrough video](https://www.linkedin.com/posts/fatemeh-feyzipour_aws-python-boto3-activity-7489349478773260288-vzou) · [Code](https://github.com/fatemehfeizipour/Projects/tree/main/Cost-auditor-script)
+🔗 [Walkthrough video](https://www.linkedin.com/posts/fatemeh-feyzipour_aws-python-boto3-activity-7489349478773260288-vzou) · [Code](https://github.com/fatemehfeizipour/aws-cost-auditor)
 
 ### 🔒 Highly Available Multi-AZ VPC
 Designed and deployed a highly available AWS VPC as code with Terraform, spanning two Availability Zones with public and private subnets, NAT Gateways, an Internet Gateway, and full route table configuration.
