@@ -12,7 +12,7 @@ This repo is a supporting index of my project work. For the complete picture —
 
 | Area | Tools / Concepts |
 |---|---|
-| Security & IAM | IAM policies, Security Groups, NACLs, least-privilege access |
+| Security & IAM | IAM policies, Security Groups, NACLs, least-privilege access, MFA enforcement, CloudTrail/CloudWatch security monitoring |
 | Networking | VPC design, subnetting, NAT Gateway, Bastion Host, route tables |
 | Compute | EC2, Lambda |
 | Storage | S3, VPC Gateway Endpoints |
@@ -28,9 +28,13 @@ This repo is a supporting index of my project work. For the complete picture —
 
 ## 🚀 Featured Projects
 
+🔐 AWS IAM Security Hardening for a Startup
+Designed and implemented least-privilege IAM access controls for a fictional 10-person startup — five IAM groups with custom and managed policies scoped to specific S3 buckets and resource types, account-wide MFA enforcement, and a fully secured root user with a verified CloudTrail → CloudWatch → SNS alerting pipeline on root logins, tested end-to-end against real login events. 🔗 Case study
+ [Code](https://github.com/fatemehfeizipour/aws-iam-security-hardening)
+
 ### 🌐 Cloud-Native Portfolio Site
 Built and deployed this portfolio site itself as a cloud project — a Next.js site hosted on AWS Amplify with a fully automated GitHub CI/CD pipeline (Provision → Build → Deploy → Verify), provisioned entirely through AWS CDK.
-🔗 [Live site](https://main.d27jisummbpcj6.amplifyapp.com/) · [Code](https://github.com/fatemehfeizipour/Projects/blob/main/Nextjs-portfolio-amplify-project/README.md)
+🔗 [Live site](https://main.d27jisummbpcj6.amplifyapp.com/) · [Code](https://github.com/fatemehfeizipour/nextjs-portfolio-amplify)
 
 ### 💰 AWS Cost & Resource Auditor
 Read-only CLI tool that scans an AWS account for common sources of wasted spend — unattached EBS volumes, idle EC2 instances (via CloudWatch CPU metrics), S3 buckets missing lifecycle policies, and unused Elastic IPs. Built with Python and boto3, with paginated API calls and fail-safe error handling per check.
