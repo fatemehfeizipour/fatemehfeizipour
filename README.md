@@ -2,7 +2,7 @@
 
 I design and build secure, scalable AWS infrastructure — from network architecture and IAM to CI/CD pipelines and Infrastructure as Code.
 
-🌐 **[View my full portfolio site →](https://main.d27jisummbpcj6.amplifyapp.com/)**
+🌐 **[View my full portfolio site →](https://main.dptchxwefat83.amplifyapp.com/)**
 
 This repo is a supporting index of my project work. For the complete picture — experience, certifications, and all projects — see the site above.
 
@@ -34,7 +34,7 @@ Designed and implemented least-privilege IAM access controls for a fictional 10-
 
 ### 🌐 Cloud-Native Portfolio Site
 Built and deployed this portfolio site itself as a cloud project — a Next.js site hosted on AWS Amplify with a fully automated GitHub CI/CD pipeline (Provision → Build → Deploy → Verify), provisioned entirely through AWS CDK.
-🔗 [Live site](https://main.d27jisummbpcj6.amplifyapp.com/) · [Code](https://github.com/fatemehfeizipour/nextjs-portfolio-amplify)
+🔗 [Live site](https://main.dptchxwefat83.amplifyapp.com/) · [Code](https://github.com/fatemehfeizipour/nextjs-portfolio-amplify)
 
 ### 💰 AWS Cost & Resource Auditor
 Read-only CLI tool that scans an AWS account for common sources of wasted spend — unattached EBS volumes, idle EC2 instances (via CloudWatch CPU metrics), S3 buckets missing lifecycle policies, and unused Elastic IPs. Built with Python and boto3, with paginated API calls and fail-safe error handling per check.
