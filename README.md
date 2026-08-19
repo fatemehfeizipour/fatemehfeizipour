@@ -29,7 +29,6 @@ This repo is a supporting index of my project work. For the complete picture —
 ## 🚀 Featured Projects
 
 🔐 AWS IAM Security Hardening for a Startup
-🔐 AWS IAM Security Hardening for a Startup
 Designed and implemented least-privilege IAM access controls for a fictional 10-person startup — five IAM groups with custom and managed policies scoped to specific S3 buckets and resource types, account-wide MFA enforcement, and a fully secured root user with a verified CloudTrail → CloudWatch → SNS alerting pipeline on root logins, tested end-to-end against real login events. Rebuilt the same structure three more times with Terraform, CloudFormation, and CDK, deployed live and compared side by side — including a real IAM policy naming bug caught in Terraform and proactively fixed before it hit the other two. 🔗 Case study
  [Code](https://github.com/fatemehfeizipour/aws-iam-security-hardening)
 
