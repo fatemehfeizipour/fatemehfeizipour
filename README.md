@@ -62,7 +62,7 @@ Built and deployed a static website using Amazon S3 for storage and Amazon Cloud
 Designed and deployed AWS infrastructure using CloudFormation, including VPCs, subnets, EC2, IAM, Auto Scaling Groups, Load Balancers, and NAT Gateways.
 🔗 [Code](https://github.com/fatemehfeizipour/Projects/tree/main/cloudformation-projects)
 
-### 🎬 A Video Sharing Platform — System Design
+### 🎬 A Video Sharing Platform - System Design
 Designed the architecture for a video-sharing platform covering the full upload-to-playback pipeline: S3 and Lambda for transcoding into multiple resolutions, Amazon Rekognition for content moderation, DynamoDB for metadata, API Gateway for auth and rate limiting, and CloudFront for low-latency delivery.
 🔗 [Case study](https://www.linkedin.com/posts/fatemeh-feyzipour_aws-cloudcomputing-systemdesign-activity-7477097594838523904-M5F4)
 
@@ -78,9 +78,9 @@ Implemented a decoupled order-processing pattern: producer publishes messages to
 
 ## 📂 Repositories
 
-- 🧪 [`AWS-Learning-Lab`](https://github.com/fatemehfeizipour/AWS-Learning-Lab) — infrastructure builds and practice environments
-- 💼 [`Projects`](https://github.com/fatemehfeizipour/Projects) — full project implementations
-- 📝 [`Documentation`](https://github.com/fatemehfeizipour/Documentation) — technical notes and reference material
+- 🧪 [`AWS-Learning-Lab`](https://github.com/fatemehfeizipour/AWS-Learning-Lab) - infrastructure builds and practice environments
+- 💼 [`Projects`](https://github.com/fatemehfeizipour/Projects) - full project implementations
+- 📝 [`Documentation`](https://github.com/fatemehfeizipour/Documentation) - technical notes and reference material
 
 ---
 
