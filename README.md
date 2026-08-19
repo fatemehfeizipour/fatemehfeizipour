@@ -29,17 +29,17 @@ This repo is a supporting index of my project work. For the complete picture —
 ## 🚀 Featured Projects
 
 🔐 AWS IAM Security Hardening for a Startup
-Designed and implemented least-privilege IAM access controls for a fictional 10-person startup — five IAM groups with custom and managed policies scoped to specific S3 buckets and resource types, account-wide MFA enforcement, and a fully secured root user with a verified CloudTrail → CloudWatch → SNS alerting pipeline on root logins, tested end-to-end against real login events. Rebuilt the same structure three more times with Terraform, CloudFormation, and CDK, deployed live and compared side by side — including a real IAM policy naming bug caught in Terraform and proactively fixed before it hit the other two. 🔗 Case study
+Designed and implemented least-privilege IAM access controls for a fictional 10-person startup - five IAM groups with custom and managed policies scoped to specific S3 buckets and resource types, account-wide MFA enforcement, and a fully secured root user with a verified CloudTrail → CloudWatch → SNS alerting pipeline on root logins, tested end-to-end against real login events. Rebuilt the same structure three more times with Terraform, CloudFormation, and CDK, deployed live and compared side by side - including a real IAM policy naming bug caught in Terraform and proactively fixed before it hit the other two. 🔗 Case study
  [Code](https://github.com/fatemehfeizipour/aws-iam-security-hardening)
 
 🏥 TechHealth Patient Portal - AWS CDK Migration Migrated a healthcare company's five-year-old, manually-built AWS environment (patient portal on EC2 and RDS, undocumented console changes, no version control) into secure Infrastructure as Code using AWS CDK - split across 4 stacks (networking, security groups, compute, database) with typed props interfaces, security group chaining so the database only accepts traffic from the web tier's SG, AWS Systems Manager Session Manager in place of SSH, RDS Multi-AZ for synchronized failover, and encryption at rest. Deployed and validated end-to-end on live AWS infrastructure, including diagnosing and fixing an Availability Zone placement bug during deployment. 🔗 Case study [Code](https://github.com/fatemehfeizipour/techhealth-migration-cdk)
 
 ### 🌐 Cloud-Native Portfolio Site
-Built and deployed this portfolio site itself as a cloud project — a Next.js site hosted on AWS Amplify with a fully automated GitHub CI/CD pipeline (Provision → Build → Deploy → Verify), provisioned entirely through AWS CDK.
+Built and deployed this portfolio site itself as a cloud project - a Next.js site hosted on AWS Amplify with a fully automated GitHub CI/CD pipeline (Provision → Build → Deploy → Verify), provisioned entirely through AWS CDK.
 🔗 [Live site](https://main.dptchxwefat83.amplifyapp.com/) · [Code](https://github.com/fatemehfeizipour/nextjs-portfolio-amplify)
 
 ### 💰 AWS Cost & Resource Auditor
-Read-only CLI tool that scans an AWS account for common sources of wasted spend — unattached EBS volumes, idle EC2 instances (via CloudWatch CPU metrics), S3 buckets missing lifecycle policies, and unused Elastic IPs. Built with Python and boto3, with paginated API calls and fail-safe error handling per check.
+Read-only CLI tool that scans an AWS account for common sources of wasted spend - unattached EBS volumes, idle EC2 instances (via CloudWatch CPU metrics), S3 buckets missing lifecycle policies, and unused Elastic IPs. Built with Python and boto3, with paginated API calls and fail-safe error handling per check.
 🔗 [Walkthrough video](https://www.linkedin.com/posts/fatemeh-feyzipour_aws-python-boto3-activity-7489349478773260288-vzou) · [Code](https://github.com/fatemehfeizipour/aws-cost-auditor)
 
 ### 🔒 Highly Available Multi-AZ VPC
@@ -47,11 +47,11 @@ Designed and deployed a highly available AWS VPC as code with Terraform, spannin
 🔗 [Code](https://github.com/fatemehfeizipour/Projects/tree/main/terraform-portfolio-project/terraform-VPC)
 
 ### 🛡️ Secure VPC Redesign for an Invoicing App
-Redesigned the network architecture for an invoicing application handling bank details for ~8,000 users — moved from a fully public setup to a defense-in-depth VPC with public/private/isolated subnet tiers, security group chaining, AWS Systems Manager Session Manager in place of SSH, and invoice files moved to S3 behind a VPC Gateway Endpoint.
+Redesigned the network architecture for an invoicing application handling bank details for ~8,000 users - moved from a fully public setup to a defense-in-depth VPC with public/private/isolated subnet tiers, security group chaining, AWS Systems Manager Session Manager in place of SSH, and invoice files moved to S3 behind a VPC Gateway Endpoint.
 🔗 [Case study](https://www.linkedin.com/posts/fatemeh-feyzipour_aws-cloudsecurity-terraform-activity-7484165129354506240--UOa)
 
 ### 🚪 Bastion Host Access Architecture
-Designed a secure administrative access pattern across two Availability Zones — SSH to a bastion host in the public subnet, then SSL to private EC2 instances — keeping private resources fully unreachable from the internet, with full public/private route table mapping.
+Designed a secure administrative access pattern across two Availability Zones - SSH to a bastion host in the public subnet, then SSL to private EC2 instances - keeping private resources fully unreachable from the internet, with full public/private route table mapping.
 🔗 [Case study](https://www.linkedin.com/posts/fatemeh-feyzipour_aws-cloudcomputing-cloudengineering-activity-7480596205891186688-wN3r)
 
 ### 🌍 Static Website on S3 + CloudFront with Terraform
@@ -67,7 +67,7 @@ Designed the architecture for a video-sharing platform covering the full upload-
 🔗 [Case study](https://www.linkedin.com/posts/fatemeh-feyzipour_aws-cloudcomputing-systemdesign-activity-7477097594838523904-M5F4)
 
 ### 🏛️ Traditional vs. Serverless Architecture
-Compared three architectural approaches for a scalable web application — horizontal scaling, vertical scaling, and a fully serverless design with API Gateway, Lambda, and EventBridge — weighing trade-offs in scalability, resilience, latency, and cost.
+Compared three architectural approaches for a scalable web application — horizontal scaling, vertical scaling, and a fully serverless design with API Gateway, Lambda, and EventBridge - weighing trade-offs in scalability, resilience, latency, and cost.
 🔗 [Case study](https://www.linkedin.com/posts/fatemeh-feyzipour_aws-cloudcomputing-systemdesign-activity-7477097594838523904-M5F4)
 
 ### 📨 Asynchronous Messaging with SQS + SNS
