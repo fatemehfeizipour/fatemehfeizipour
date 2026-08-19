@@ -4,7 +4,7 @@ I design and build secure, scalable AWS infrastructure — from network architec
 
 🌐 **[View my full portfolio site →](https://main.dptchxwefat83.amplifyapp.com/)**
 
-This repo is a supporting index of my project work. For the complete picture — experience, certifications, and all projects — see the site above.
+This repo is a supporting index of my project work. For the complete picture - experience, certifications, and all projects - see the site above.
 
 ---
 
