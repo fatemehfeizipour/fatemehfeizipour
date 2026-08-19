@@ -1,6 +1,6 @@
 # Fatemeh Feizipour | AWS Cloud Engineer
 
-I design and build secure, scalable AWS infrastructure — from network architecture and IAM to CI/CD pipelines and Infrastructure as Code.
+I design and build secure, scalable AWS infrastructure - from network architecture and IAM to CI/CD pipelines and Infrastructure as Code.
 
 🌐 **[View my full portfolio site →](https://main.dptchxwefat83.amplifyapp.com/)**
 
