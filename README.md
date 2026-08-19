@@ -12,8 +12,8 @@ This repo is a supporting index of my project work. For the complete picture —
 
 | Area | Tools / Concepts |
 |---|---|
-| Security & IAM | IAM policies, Security Groups, NACLs, least-privilege access, MFA enforcement, CloudTrail/CloudWatch security monitoring |
-| Networking | VPC design, subnetting, NAT Gateway, Bastion Host, route tables |
+| Security & IAM | IAM policies, Security Groups, NACLs, least-privilege access, MFA enforcement, CloudTrail/CloudWatch security monitoring, Secrets Manager |
+| Networking | VPC design, subnetting, NAT Gateway, Bastion Host, route tables, AWS Systems Manager (Session Manager) |
 | Compute | EC2, Lambda |
 | Storage | S3, VPC Gateway Endpoints |
 | Databases | DynamoDB, RDS |
@@ -29,8 +29,10 @@ This repo is a supporting index of my project work. For the complete picture —
 ## 🚀 Featured Projects
 
 🔐 AWS IAM Security Hardening for a Startup
-Designed and implemented least-privilege IAM access controls for a fictional 10-person startup — five IAM groups with custom and managed policies scoped to specific S3 buckets and resource types, account-wide MFA enforcement, and a fully secured root user with a verified CloudTrail → CloudWatch → SNS alerting pipeline on root logins, tested end-to-end against real login events. 🔗 Case study
+Designed and implemented least-privilege IAM access controls for a fictional 10-person startup - five IAM groups with custom and managed policies scoped to specific S3 buckets and resource types, account-wide MFA enforcement, and a fully secured root user with a verified CloudTrail → CloudWatch → SNS alerting pipeline on root logins, tested end-to-end against real login events. 🔗 Case study
  [Code](https://github.com/fatemehfeizipour/aws-iam-security-hardening)
+
+🏥 TechHealth Patient Portal - AWS CDK Migration Migrated a healthcare company's five-year-old, manually-built AWS environment (patient portal on EC2 and RDS, undocumented console changes, no version control) into secure Infrastructure as Code using AWS CDK - split across 4 stacks (networking, security groups, compute, database) with typed props interfaces, security group chaining so the database only accepts traffic from the web tier's SG, AWS Systems Manager Session Manager in place of SSH, RDS Multi-AZ for synchronized failover, and encryption at rest. Deployed and validated end-to-end on live AWS infrastructure, including diagnosing and fixing an Availability Zone placement bug during deployment. 🔗 Case study [Code](https://github.com/fatemehfeizipour/techhealth-migration-cdk)
 
 ### 🌐 Cloud-Native Portfolio Site
 Built and deployed this portfolio site itself as a cloud project — a Next.js site hosted on AWS Amplify with a fully automated GitHub CI/CD pipeline (Provision → Build → Deploy → Verify), provisioned entirely through AWS CDK.
