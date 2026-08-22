@@ -86,7 +86,7 @@ Implemented a decoupled order-processing pattern: producer publishes messages to
 
 ## 📫 Contact
 
-- Portfolio: [main.d27jisummbpcj6.amplifyapp.com](https://main.d27jisummbpcj6.amplifyapp.com/)
+- Portfolio: [main.d27jisummbpcj6.amplifyapp.com](https://main.dptchxwefat83.amplifyapp.com/)
 - LinkedIn: [linkedin.com/in/fatemeh-feyzipour](https://www.linkedin.com/in/fatemeh-feyzipour/)
 - GitHub: [github.com/fatemehfeizipour](https://github.com/fatemehfeizipour)
 - Email: fatemehfeizipur@gmail.com
