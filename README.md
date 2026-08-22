@@ -39,6 +39,8 @@ This repo is a supporting index of my project work. For the complete picture - e
   </a>
  </div>
 
+ ---
+
 ## 🚀 Featured Projects
 
 ### 🔐 AWS IAM Security Hardening for a Startup
