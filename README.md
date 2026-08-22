@@ -32,7 +32,7 @@ This repo is a supporting index of my project work. For the complete picture - e
 
 <div style="display: flex; align-items: center; gap: 20px;">
   <a href="https://www.credly.com/badges/5e7eede4-8385-4331-8cea-b1f0252622e7/public_url">
-    <img src="https://github.com/fatemehfeizipour/fatemehfeizipour/edit/main/aws-certified-cloud-practitioner.png" width="150" height="150" alt="AWS Certified Cloud Practitioner">
+    <img src="https://github.com/fatemehfeizipour/fatemehfeizipour/blob/main/aws-certified-cloud-practitioner.png" width="150" height="150" alt="AWS Certified Cloud Practitioner">
   </a>
   <a href="https://www.skool.com/cloudengineeracademy/about?ref=d165eea32fa24ae790bd84afecd78a56">
     <img src="https://github.com/fatemehfeizipour/fatemehfeizipour/blob/main/academy-badge.png" width="150" height="150" alt="Cloud Engineer Academy Graduate">
