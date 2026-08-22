@@ -90,14 +90,6 @@ Implemented a decoupled order-processing pattern: producer publishes messages to
 
 ---
 
-## 📂 Repositories
-
-- 🧪 [`AWS-Learning-Lab`](https://github.com/fatemehfeizipour/AWS-Learning-Lab) - infrastructure builds and practice environments
-- 💼 [`Projects`](https://github.com/fatemehfeizipour/Projects) - full project implementations
-- 📝 [`Documentation`](https://github.com/fatemehfeizipour/Documentation) - technical notes and reference material
-
----
-
 ## 📫 Contact
 
 - Portfolio: [main.d27jisummbpcj6.amplifyapp.com](https://main.dptchxwefat83.amplifyapp.com/)
