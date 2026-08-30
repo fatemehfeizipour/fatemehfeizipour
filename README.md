@@ -43,7 +43,6 @@ This repo is a supporting index of my project work. For the complete picture - e
 
 ## 🚀 Featured Projects
 
-🚀 Featured Projects
 ### ✈️ TravelEase Contact Form - Serverless AWS Pipeline
 
 Replaced a travel agency's basic mailto contact link with a fully serverless inquiry system - S3 static hosting, API Gateway (POST + OPTIONS with a CORS mock integration), Lambda for validation and orchestration, DynamoDB for storage, and SES for dual confirmation/notification emails. Split IAM into least-privilege statements after catching a real scoping bug (a wildcarded SES resource silently un-scoping a tightly-scoped DynamoDB permission in a shared statement), added a CloudWatch alarm and SES delivery-event notifications routed through SNS, and deliberately handled the DynamoDB write and each SES call with different failure behavior so an email hiccup can't make a successfully-saved submission look like it failed. All 28 resources deployed via Terraform.
