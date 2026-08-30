@@ -43,12 +43,39 @@ This repo is a supporting index of my project work. For the complete picture - e
 
 ## 🚀 Featured Projects
 
+🚀 Featured Projects
+### ✈️ TravelEase Contact Form - Serverless AWS Pipeline
+
+Replaced a travel agency's basic mailto contact link with a fully serverless inquiry system - S3 static hosting, API Gateway (POST + OPTIONS with a CORS mock integration), Lambda for validation and orchestration, DynamoDB for storage, and SES for dual confirmation/notification emails. Split IAM into least-privilege statements after catching a real scoping bug (a wildcarded SES resource silently un-scoping a tightly-scoped DynamoDB permission in a shared statement), added a CloudWatch alarm and SES delivery-event notifications routed through SNS, and deliberately handled the DynamoDB write and each SES call with different failure behavior so an email hiccup can't make a successfully-saved submission look like it failed. All 28 resources deployed via Terraform.
+
+[**Video walkthrough**](https://www.linkedin.com/posts/fatemeh-feyzipour_aws-cloudcomputing-terraform-activity-7499618863983042560-k52A?utm_source=share&utm_medium=member_desktop&rcm=ACoAADOdEekBNejZcME7HcR483AQlDee7t4jnBU)
+
+🔗[Blog post](https://medium.com/@fatemehfeizipur/from-a-mailto-link-to-a-serverless-contact-form-building-traveleases-inquiry-system-on-aws-fc4404b623f0?sharedUserId=fatemehfeizipur)
+
+[Code](https://github.com/fatemehfeizipour/travelease-contact)
+
 ### 🔐 AWS IAM Security Hardening for a Startup
-Designed and implemented least-privilege IAM access controls for a fictional 10-person startup - five IAM groups with custom and managed policies scoped to specific S3 buckets and resource types, account-wide MFA enforcement, and a fully secured root user with a verified CloudTrail → CloudWatch → SNS alerting pipeline on root logins, tested end-to-end against real login events. Rebuilt the same structure three more times with Terraform, CloudFormation, and CDK, deployed live and compared side by side - including a real IAM policy naming bug caught in Terraform and proactively fixed before it hit the other two. 🔗 Case study
- [Code](https://github.com/fatemehfeizipour/aws-iam-security-hardening)
+Designed and implemented least-privilege IAM access controls for a fictional 10-person startup - five IAM groups with custom and managed policies scoped to specific S3 buckets and resource types, account-wide MFA enforcement, and a fully secured root user with a verified CloudTrail → CloudWatch → SNS alerting pipeline on root logins, tested end-to-end against real login events. Rebuilt the same structure three more times with Terraform, CloudFormation, and CDK, deployed live and compared side by side - including a real IAM policy naming bug caught in Terraform and proactively fixed before it hit the other two. 
+
+[Walk-through video - part one](https://www.linkedin.com/posts/fatemeh-feyzipour_aws-cloudsecurity-iam-activity-7492586371396554753-ISwl?utm_source=share&utm_medium=member_desktop&rcm=ACoAADOdEekBNejZcME7HcR483AQlDee7t4jnBU)
+
+[Medium Blog - part one](https://medium.com/@fatemehfeizipur/from-everyone-shares-root-to-least-privilege-an-aws-iam-security-project-b810d175512b?sharedUserId=fatemehfeizipur)
+
+[walk-through video - part two ](https://www.linkedin.com/posts/fatemeh-feyzipour_aws-terraform-cloudformation-activity-7495320177169928192-3ID5?utm_source=share&utm_medium=member_desktop&rcm=ACoAADOdEekBNejZcME7HcR483AQlDee7t4jnBU)
+
+[Medium Blog - part two](
+https://medium.com/@fatemehfeizipur/the-same-iam-setup-built-three-ways-what-terraform-cloudformation-and-cdk-actually-taught-me-9885d0b33664?sharedUserId=fatemehfeizipur)
+
+[Code](https://github.com/fatemehfeizipour/aws-iam-security-hardening)
 
 ### 🏥 TechHealth Patient Portal
-AWS CDK Migration Migrated a healthcare company's five-year-old, manually-built AWS environment (patient portal on EC2 and RDS, undocumented console changes, no version control) into secure Infrastructure as Code using AWS CDK - split across 4 stacks (networking, security groups, compute, database) with typed props interfaces, security group chaining so the database only accepts traffic from the web tier's SG, AWS Systems Manager Session Manager in place of SSH, RDS Multi-AZ for synchronized failover, and encryption at rest. Deployed and validated end-to-end on live AWS infrastructure, including diagnosing and fixing an Availability Zone placement bug during deployment. 🔗 Case study [Code](https://github.com/fatemehfeizipour/techhealth-migration-cdk)
+AWS CDK Migration Migrated a healthcare company's five-year-old, manually-built AWS environment (patient portal on EC2 and RDS, undocumented console changes, no version control) into secure Infrastructure as Code using AWS CDK - split across 4 stacks (networking, security groups, compute, database) with typed props interfaces, security group chaining so the database only accepts traffic from the web tier's SG, AWS Systems Manager Session Manager in place of SSH, RDS Multi-AZ for synchronized failover, and encryption at rest. Deployed and validated end-to-end on live AWS infrastructure, including diagnosing and fixing an Availability Zone placement bug during deployment. 
+
+[Code](https://github.com/fatemehfeizipour/techhealth-migration-cdk)
+
+[Walk-through video](https://www.linkedin.com/posts/fatemeh-feyzipour_aws-cdk-infrastructureascode-activity-7495696663903191042-HZpH?utm_source=share&utm_medium=member_desktop&rcm=ACoAADOdEekBNejZcME7HcR483AQlDee7t4jnBU)
+
+[Medium Blog](https://medium.com/@fatemehfeizipur/from-console-chaos-to-infrastructure-as-code-migrating-a-healthcare-patient-portal-to-aws-cdk-377e30e6c1c0?sharedUserId=fatemehfeizipur)
 
 ### 🌐 Cloud-Native Portfolio Site
 Built and deployed this portfolio site itself as a cloud project - a Next.js site hosted on AWS Amplify with a fully automated GitHub CI/CD pipeline (Provision → Build → Deploy → Verify), provisioned entirely through AWS CDK.
