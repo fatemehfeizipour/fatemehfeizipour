@@ -54,6 +54,7 @@ The rebuild also adds a real delivery pipeline. Terraform state lives in S3 with
 [**Video walkthrough (first version)**](https://www.linkedin.com/posts/fatemeh-feyzipour_aws-cloudcomputing-terraform-activity-7499618863983042560-k52A?utm_source=share&utm_medium=member_desktop&rcm=ACoAADOdEekBNejZcME7HcR483AQlDee7t4jnBU)
 
 [**Blog post (first version)**](https://medium.com/@fatemehfeizipur/from-a-mailto-link-to-a-serverless-contact-form-building-traveleases-inquiry-system-on-aws-fc4404b623f0?sharedUserId=fatemehfeizipur)
+#
 
 ###  [🔐 AWS IAM Security Hardening for a Startup](https://github.com/fatemehfeizipour/aws-iam-security-hardening)
 Designed and implemented least-privilege IAM access controls for a fictional 10-person startup - five IAM groups with custom and managed policies scoped to specific S3 buckets and resource types, account-wide MFA enforcement, and a fully secured root user with a verified CloudTrail → CloudWatch → SNS alerting pipeline on root logins, tested end-to-end against real login events. Rebuilt the same structure three more times with Terraform, CloudFormation, and CDK, deployed live and compared side by side - including a real IAM policy naming bug caught in Terraform and proactively fixed before it hit the other two. 
