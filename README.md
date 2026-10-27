@@ -43,14 +43,17 @@ This repo is a supporting index of my project work. For the complete picture - e
 
 ## 🚀 Featured Projects
 
-### [✈️ TravelEase Contact Form - Serverless AWS Pipeline](https://github.com/fatemehfeizipour/travelease-contact)
+### [✈️ TravelEase Contact Form - Serverless AWS Pipeline, Rebuilt](https://github.com/fatemehfeizipour/travelease-serverless-contact-form-rebuild)
 
-Replaced a travel agency's basic mailto contact link with a fully serverless inquiry system - S3 static hosting, API Gateway (POST + OPTIONS with a CORS mock integration), Lambda for validation and orchestration, DynamoDB for storage, and SES for dual confirmation/notification emails. Split IAM into least-privilege statements after catching a real scoping bug (a wildcarded SES resource silently un-scoping a tightly-scoped DynamoDB permission in a shared statement), added a CloudWatch alarm and SES delivery-event notifications routed through SNS, and deliberately handled the DynamoDB write and each SES call with different failure behavior so an email hiccup can't make a successfully-saved submission look like it failed. All 28 resources deployed via Terraform.
+I built this serverless inquiry system twice. The first version replaced a travel agency's mailto link, and the second time I rebuilt it from scratch so I could explain every piece and every decision. This time the whole thing is Terraform. A private S3 bucket is served through CloudFront with an origin access control, and an HTTP API (chosen over REST on purpose) passes requests to a Python Lambda that validates the form and writes to DynamoDB first. Only after a successful write does it send the business notification through SNS and the customer confirmation through SES. Those two sends are independent, so one failing doesn't block the other. A hidden honeypot field catches bots, and CloudWatch metric filters count those hits and raise an alarm on failed sends. The API has CORS locked to the CloudFront origin and stage throttling, and the Lambda role is limited to exactly the actions it needs.
 
-[**Video walkthrough**](https://www.linkedin.com/posts/fatemeh-feyzipour_aws-cloudcomputing-terraform-activity-7499618863983042560-k52A?utm_source=share&utm_medium=member_desktop&rcm=ACoAADOdEekBNejZcME7HcR483AQlDee7t4jnBU)
+The rebuild also adds a real delivery pipeline. Terraform state lives in S3 with native locking. GitHub Actions runs a check on every push, a plan on every pull request, and an apply on merge to main. It signs in to AWS with short-lived OIDC credentials instead of stored keys, with separate read-only and write roles. The project stays in the SES sandbox deliberately, to avoid paying for a domain.
 
-🔗[Blog post](https://medium.com/@fatemehfeizipur/from-a-mailto-link-to-a-serverless-contact-form-building-traveleases-inquiry-system-on-aws-fc4404b623f0?sharedUserId=fatemehfeizipur)
-#
+[**First version**](https://github.com/fatemehfeizipour/travelease-contact)
+
+[**Video walkthrough (first version)**](https://www.linkedin.com/posts/fatemeh-feyzipour_aws-cloudcomputing-terraform-activity-7499618863983042560-k52A?utm_source=share&utm_medium=member_desktop&rcm=ACoAADOdEekBNejZcME7HcR483AQlDee7t4jnBU)
+
+[**Blog post (first version)**](https://medium.com/@fatemehfeizipur/from-a-mailto-link-to-a-serverless-contact-form-building-traveleases-inquiry-system-on-aws-fc4404b623f0?sharedUserId=fatemehfeizipur)
 
 ###  [🔐 AWS IAM Security Hardening for a Startup](https://github.com/fatemehfeizipour/aws-iam-security-hardening)
 Designed and implemented least-privilege IAM access controls for a fictional 10-person startup - five IAM groups with custom and managed policies scoped to specific S3 buckets and resource types, account-wide MFA enforcement, and a fully secured root user with a verified CloudTrail → CloudWatch → SNS alerting pipeline on root logins, tested end-to-end against real login events. Rebuilt the same structure three more times with Terraform, CloudFormation, and CDK, deployed live and compared side by side - including a real IAM policy naming bug caught in Terraform and proactively fixed before it hit the other two. 
