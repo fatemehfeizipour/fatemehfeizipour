@@ -1,0 +1,8 @@
+### [✈️ TravelEase Contact Form - Serverless AWS Pipeline, Rebuilt](https://github.com/fatemehfeizipour/travelease-serverless-contact-form-rebuild)
+
+I built this serverless inquiry system twice. The first version replaced a travel agency's mailto link, and the second time I rebuilt it from scratch so I could explain every piece and every decision. This time the whole thing is Terraform. A private S3 bucket is served through CloudFront with an origin access control, and an HTTP API (chosen over REST on purpose) passes requests to a Python Lambda that validates the form and writes to DynamoDB first. Only after a successful write does it send the business notification through SNS and the customer confirmation through SES. Those two sends are independent, so one failing doesn't block the other. A hidden honeypot field catches bots, and CloudWatch metric filters count those hits and raise an alarm on failed sends. The API has CORS locked to the CloudFront origin and stage throttling, and the Lambda role is limited to exactly the actions it needs.
+
+The rebuild also adds a real delivery pipeline. Terraform state lives in S3 with native locking. GitHub Actions runs a check on every push, a plan on every pull request, and an apply on merge to main. It signs in to AWS with short-lived OIDC credentials instead of stored keys, with separate read-only and write roles. The project stays in the SES sandbox deliberately, to avoid paying for a domain.
+
+[First version](https://github.com/fatemehfeizipour/travelease-contact) · [Video walkthrough (first version)](PASTE-LINK) · [Blog post (first version)](PASTE-LINK)
+#
